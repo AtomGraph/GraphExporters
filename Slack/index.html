@@ -135,6 +135,53 @@
 					</dl>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Data export</h2>
+					<p>After the CloudFormation stack is deployed, follow these steps:</p>
+					<ol>
+						<li>Go to <samp>ECS → Cluster → SlackGraphExporter-FargateClusterXXXXXX → Tasks</samp></li>
+						<li>Click the <button class="btn">Run new task</button> button</li>
+						<li>Under <samp>Deployment configuration</samp>, select <samp>SlackGraphExporterSlackTaskRunnerYYYYYY</samp> as the <samp>Family</samp></li>
+						<li>Under <samp>Networking</samp>, select
+							<ol>
+								<li>VPC named <samp>SlackGraphExporter/OctupusVPC</samp></li>
+								<li>Private subnet(s)</li>
+								<li>The default VPC security group</li>
+							</ol>
+						</li>
+						<li>Click <button class="btn">Create</button> to create the task</li>
+					</ol>
+				</div>
+				<p>Resource names depend on your stack name; we have used <samp>SlackGraphExporter</samp> as an example.</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Stack inputs</h3>
+					<dl>
+						<dt>NeptuneDBInstanceClass</dt>
+						<dd>Neptune DB instance class (e.g. <samp>db.t3.medium</samp>)</dd>
+						<dt>RDFBaseURI</dt>
+						<dd>Base URI for the RDF data (has to end with <samp>/</samp>)</li>
+						<dt>SlackAuthToken</dt>
+						<dd>Slack auth token</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Stack outputs</h3>
+					<dl>
+						<dt>NeptuneSPARQLEndpointURL</dt>
+						<dd>URL of the Neptune SPARQL endpoint</dd>
+						<dt>RDFOutputBucket</dt>
+						<dd>S3 bucket where RDF data will be written</dd>
+					</dl>
+				</div>
+			</div>
 		</div>
 
 		<p class="lead text-center footer">Developed by <a href="https://atomgraph.com"><img alt="AtomGraph" src="https://atomgraph.github.io/GraphExporters/img/atomgraph-logo-color.png" style="height: 2em"/> AtomGraph</a></p>
