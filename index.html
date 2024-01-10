@@ -15,15 +15,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="LinkedDataHub is open source software you can use to manage data, create visualizations and build apps on RDF Knowledge Graphs">
-		<meta name="keywords" content="RDF, SPARQL, Linked Data, Linked Data Templates, Linked Open Data, Knowledge Graph, declarative, triplestore, Semantic Web, XSLT, LDT, ontology, OWL, hypermedia, WebID, data driven, structured content">
+		<meta name="keywords" content="RDF, SPARQL, Linked Data, Knowledge Graph, graph, ETL, export, exporter, ChatGPT, GPT, LLM, RAG, LlamaIndex, LangChain, enterprise search, customer 360, Slack, GMail, JIRA">
 		<meta name="author" content="AtomGraph">
 		<meta name="twitter:title" content="LinkedDataHub – The low-code Knowledge Graph application platform">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@atomgraphhq">
-		<meta property="og:url" content="https://atomgraph.github.io/LinkedDataHub/">
+		<meta property="og:url" content="https://atomgraph.github.io/GraphExporters/">
 		<meta property="og:title" content="LinkedDataHub – The low-code Knowledge Graph application platform">
 		<meta property="og:description" content="LinkedDataHub is open source software you can use to manage data, create visualizations and build apps on RDF Knowledge Graphs">
-		<meta property="og:image" content="https://atomgraph.github.io/LinkedDataHub/img/og-image.png">
+		<meta property="og:image" content="https://atomgraph.github.io/GraphExporters/img/og-image.png">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:image:width" content="679">
 		<meta property="og:image:height" content="385">
@@ -31,7 +31,7 @@
 
 		<!-- schema.org metadata -->
 		<script type="application/ld+json">
-			{ "@context": "https://schema.org", "@type": "WebApplication", "name": "LinkedDataHub", "description": "The low-code Knowledge Graph application platform", "url": "https://atomgraph.github.io/LinkedDataHub/", "operatingSystem": "Docker", "applicationCategory": [ "Data management", "Browser", "Analytics" ], "screenshot": "LDHChartMode.png", "downloadUrl": "https://github.com/AtomGraph/LinkedDataHub", "license": "https://www.apache.org/licenses/LICENSE-2.0", "keywords": [ "RDF", "SPARQL", "Linked Data", "Linked Data Templates", "Linked Open Data", "Knowledge Graph", "fair", "fair data", "declarative", "triplestore", "Semantic Web", "XSLT", "LDT", "ontology", "OWL", "hypermedia", "WebID", "data driven", "structured content" ] , "publisher": { "@type": "Organization", "name": "AtomGraph", "url": "https://atomgraph.com" } }
+			{ "@context": "https://schema.org", "@type": "WebApplication", "name": "LinkedDataHub", "description": "Knowledge Graph exporters", "url": "https://atomgraph.github.io/GraphExporters/", "applicationCategory": [ "Data integration", "ETL" ], "screenshot": "LDHChartMode.png", "keywords": [ "RDF", "SPARQL", "Linked Data", "Knowledge Graph", "graph", "ETL", "export", "exporter", "ChatGPT", "GPT", "LLM", "RAG", "LlamaIndex", "LangChain", "enterprise search", "customer 360", "Slack", "GMail", "JIRA" ] , "publisher": { "@type": "Organization", "name": "AtomGraph", "url": "https://atomgraph.com" } }
 		</script>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -80,30 +80,18 @@
 
 			.footer { margin-top: 4em; margin-bottom: 3em; }
 		</style>
-		<title>LinkedDataHub – The low-code Knowledge Graph application platform</title>
+		<title>AtomGraph Graph Exporters</title>
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand" href="#">LinkedDataHub</a>
+			<a class="navbar-brand" href="#">Graph Exporters</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="linkeddatahub/docs/">Documentation</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="https://github.com/AtomGraph/LinkedDataHub-Apps">Sample applications</a>
-					</li>
-					<li class="nav-item gh-button">
-						<a class="github-button" href="https://github.com/AtomGraph/LinkedDataHub/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch AtomGraph/LinkedDataHub on GitHub">Watch</a>
-					</li>
-					<li class="nav-item gh-button">
-						<a class="github-button" href="https://github.com/AtomGraph/LinkedDataHub" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star AtomGraph/LinkedDataHub on GitHub">Star</a>
-					</li>
 					<li class="nav-item twitter-button">
 						<a href="https://twitter.com/atomgraphhq?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @atomgraphhq</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</li>
@@ -111,12 +99,70 @@
 			</div>
 		</nav>
 
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+				<h1 class="display-4">The <em>low-code</em><br>Knowledge Graph<br> extractors</h1>
+				<p class="lead">Graph Extractors is is the quickest and cheapest way to
+					<br>to extract RDF Knowledge Graph data from cloud services</p>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Zero ETL configuration</h5>
+							<!-- <p class="card-text lead">RDF-native FAIR data environment</p> -->
+							<ul>
+								<li>ETL pipeline configuration is not necessary</li>
+								<li>The output RDF data is readily modeled using established vocabularies</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Ready for AI applications</h5>
+							<!-- <p class="card-text lead">Low code application development</p> -->
+							<ul>
+								<li>The graph output can power Retrieval Augmented Generation (RAG) apps</li>
+								<li>Essential for enterprise search, customer 360 and sentiment analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Convenient delivery</h5>
+							<!-- <p class="card-text lead">Low code application development</p> -->
+							<ul>
+								<li>Live data with SPARQL query access in an AWS Neptune database</li>
+								<li>Static RDF quad files in an AWS S3 bucket</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="container-fluid mb-4">
-			<h2 class="display-4 text-center mt-5 mb-5">Powerful features</h2>
+			<h2 class="display-4 text-center mt-5 mb-5">Exporters</h2>
 
 			<div class="row">
-				<div class="col-sm-3">HELLO</div>
+				<div class="col-sm-2 offset-sm-5">
+					<div class="card">
+						<h5 class="card-header">Slack</h5>
+						<div class="card-body">
+							<p>Documentation</p>
+							<p>
+								<a href="https://aws.amazon.com/marketplace/pp/prodview-jiuq6mekaeks2" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="aws-marketplace-button">&nbsp;</a>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -128,5 +174,4 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</body>
-
 </html>
