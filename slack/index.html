@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38402002-6"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-38402002-6');
+		</script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Graph Exporters is the quickest and cheapest way to extract RDF Knowledge Graph data from cloud services">
+		<meta name="keywords" content="RDF, SPARQL, Linked Data, Knowledge Graph, graph, ETL, export, exporter, ChatGPT, GPT, LLM, RAG, LlamaIndex, LangChain, enterprise search, customer 360, Slack, GMail, JIRA">
+		<meta name="author" content="AtomGraph">
+		<meta name="twitter:title" content="Graph Exporters – The low-code Knowledge Graph exporters">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@atomgraphhq">
+		<meta property="og:url" content="https://atomgraph.github.io/GraphExporters/">
+		<meta property="og:title" content="Graph Exporters – The low-code Knowledge Graph exporters">
+		<meta property="og:description" content="Graph Exporters is the quickest and cheapest way to extract RDF Knowledge Graph data from cloud services">
+		<meta property="og:image" content="https://atomgraph.github.io/GraphExporters/img/og-image.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="679">
+		<meta property="og:image:height" content="385">
+		<meta property="og:site_name" content="Graph Exporters">
+
+		<!-- schema.org metadata -->
+		<script type="application/ld+json">
+			{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Graph Exporters", "description": "Knowledge Graph exporters", "url": "https://atomgraph.github.io/GraphExporters/", "applicationCategory": [ "Data integration", "ETL" ], "screenshot": "LDHChartMode.png", "keywords": [ "RDF", "SPARQL", "Linked Data", "Knowledge Graph", "graph", "ETL", "export", "exporter", "ChatGPT", "GPT", "LLM", "RAG", "LlamaIndex", "LangChain", "enterprise search", "customer 360", "Slack", "GMail", "JIRA" ] , "publisher": { "@type": "Organization", "name": "AtomGraph", "url": "https://atomgraph.com" } }
+		</script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Rubik:300i,400,500" rel="stylesheet">
+		<style type="text/css">
+			body {
+				font-family: "Rubik", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				color: #04286E;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+			}
+			
+			.jumbotron {
+				background: linear-gradient(0deg, #04286E 0%, #182848 100%);
+				/* background-image: url('img/cool-background.png'); */
+				color: white;
+			}
+			
+			.jumbotron h1 {
+				/* text-shadow: 2px 2px 2px grey; */
+			}
+			
+			h5.card-title {
+				color: #EA607E;
+			}
+			
+			.card {
+				box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+			}
+
+			.table {
+				color: #04286E;
+				box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+			}
+			.table th {
+				background-color: rgba(0,0,0,.03);
+				font-weight: 500;
+				font-size: 20px;
+			}
+
+			#github-button { background-image: url('img/GitHub_Logo_White.png'); background-position: center center; background-repeat: no-repeat; width: 100px; background-size: 80%; }
+			#aws-marketplace-button { background-image: url('img/AWSMP_NewLogo_RGB_REV.svg'); background-position: center center; background-repeat: no-repeat; width: 200px; background-size: 80%; }
+			.gh-button { margin-top: 5px; } /* GH button */
+			.twitter-button { margin-top: 9px; margin-left: 9px; }
+
+			.footer { margin-top: 4em; margin-bottom: 3em; }
+		</style>
+		<title>AtomGraph Graph Exporters</title>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+			<a class="navbar-brand" href="#">Graph Exporters</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item twitter-button">
+						<a href="https://twitter.com/atomgraphhq?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @atomgraphhq</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<h1>Slack Graph Exporter</h1>
+		
+		<div>
+			<h2>Deployment using CloudFormation</h2>
+			<p>Click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1">this link</a> to create a new CloudFormation stack.
+			<p class="alert alert-warning">Currently only the <samp>us-east-1</samp> availability zone is supported.</p>
+		</div>
+
+		<div>
+			<h2>Stack inputs</h2>
+			<dl>
+				<dt>NeptuneDBInstanceClass</dt>
+				<dd>Neptune DB instance class (e.g. <samp>db.t3.medium</samp>)</dd>
+				<dt>RDFBaseURI</dt>
+				<dd>Base URI for the RDF data (has to end with <samp>/</samp>)</li>
+				<dt>SlackAuthToken</dt>
+				<dd>Slack auth token</dd>
+			</dl>
+		</div>
+
+		<div>
+			<h2>Stack outputs</h2>
+			<dl>
+				<dt>NeptuneSPARQLEndpointURL</dt>
+				<dd>URL of the Neptune SPARQL endpoint</dd>
+				<dt>RDFOutputBucket</dt>
+				<dd>S3 bucket where RDF data will be written</dd>
+			</dl>
+		</div>
+
+		<p class="lead text-center footer">Developed by <a href="https://atomgraph.com"><img alt="AtomGraph" src="img/atomgraph-logo-color.png" style="height: 2em"/> AtomGraph</a></p>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
