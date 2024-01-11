@@ -1,0 +1,11 @@
+<https://localhost/conversations/1614287609.001200> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/sioc/ns#Post> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#content> "<https://www.inc.com/christine-lagorio/jack-dangermond-esri-what-i-know-podcast.html>" <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#has_creator> <https://localhost/users/UBM1WAVD1> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#id> "1614287609.001200" <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://purl.org/dc/terms/created> "2021-02-25T21:13:29"^^<http://www.w3.org/2001/XMLSchema#dateTime> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#reply_of> <https://localhost/conversations/1614287327.000500> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#content> "<https://www.esri.com/about/newsroom/blog/how-researchers-built-johns-hopkins-dashboard/>" <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://purl.org/dc/terms/title> "COVID-19: Inside Look at the Johns Hopkins Dashboard, Keeping Tabs on the Virus" <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#links_to> <https://www.esri.com/about/newsroom/blog/how-researchers-built-johns-hopkins-dashboard/> <https://localhost/conversations/1614287609.001200> .
+<https://localhost/conversations/1614287609.001200> <http://rdfs.org/sioc/ns#content> "Ensheng Dong, the architect of the Johns Hopkins COVID-19 dashboard, applied his knowledge of GIS to map and track the spread of the disease." <https://localhost/conversations/1614287609.001200> .
