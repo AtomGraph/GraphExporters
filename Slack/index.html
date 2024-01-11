@@ -200,17 +200,17 @@
 					<ol>
 						<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">Install or update the latest version of the AWS CLI</a></li>
 						<li>Configure AWS credentials
-							<pre>sudo apt-get update && \
-sudo apt-get install unzip && \
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
-unzip awscliv2.zip && \
-sudo ./aws/install && \
+							<pre>sudo apt-get update &amp;&amp; \
+sudo apt-get install unzip &amp;&amp; \
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" &amp;&amp; \
+unzip awscliv2.zip &amp;&amp; \
+sudo ./aws/install &amp;&amp; \
 aws configure</pre>
 						</li>
 						<li>Install <samp>awscurl</samp>
-							<pre>sudo apt-get update && \
-sudo apt-get install python3-pip jq && \
-pip3 install awscurl && \
+							<pre>sudo apt-get update &amp;&amp; \
+sudo apt-get install python3-pip jq &amp;&amp; \
+pip3 install awscurl &amp;&amp; \
 export PATH="$PATH:/home/ubuntu/.local/bin"</pre>
 						</li>
 						<li>Execute the <samp>ec2_neptune_query.sh</samp> script which will
