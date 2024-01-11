@@ -105,7 +105,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Deployment using AWS CloudFormation</h2>
-					<p>Click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1">this link</a> to create a new CloudFormation stack.
+					<p>Click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1" target="_blank">this link</a> to create a new CloudFormation stack.
 					<p class="alert alert-warning">Currently only the <samp>us-east-1</samp> availability zone is supported.</p>
 				</div>
 			</div>
@@ -154,6 +154,42 @@
 						<li>Click <button class="btn btn-primary">Create</button> to create the task</li>
 					</ol>
 					<p>Resource names depend on your stack name; we have used <samp>SlackGraphExporter</samp> as an example.</p>
+				</div>
+			</div>
+
+			<h2>Access Neptune from EC2</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Configure resources</h3>
+					<p>Based on <a href="https://docs.aws.amazon.com/neptune/latest/userguide/get-started-connect-ec2-same-vpc.html" target="_blank">Connecting to a Neptune DB Cluster from an Amazon EC2 instance in the same VPC</a>.</p>
+					<ol>
+						<li>Make sure EC2 instance's network settings are correct</li>
+							<ul>
+								<li>VPC is <samp>SlackGraphExporter/OctopusVPC</samp></li>
+								<li>Subnet is a public subnet such as <samp>SlackGraphExporter/OctopusVPC/PublicSubnet1</samp></li>
+							</ul>
+						<li>Change <samp>NeptuneSecurityGroup</samp>'s inbound rule on port 8182 to use EC2 instances security group as its <samp>Source</samp></li>
+						<li>Create an IAM role for a Neptune client on EC2 that
+							<ul>
+								<li>has AWS-managed <samp>NeptuneFullAccess</samp> policy or better yet, a custom policy
+									<pre>{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			 "Effect": "Allow",
+			 "Action": [
+				 "neptune-db:*"
+			 ],
+			 "Resource": [
+				 "*"
+			 ]
+		}
+	]
+}</pre>
+								<li>has a <em>Trust relationship</em> that allows to assume the IAM user that has deployed the CloudFormation stack</li>
+							</ul>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</div>
