@@ -192,6 +192,40 @@
 					</ol>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Query SPARQL endpoint</h3>
+					<p>The following instructions were tested on a Ubuntu 22.04 EC2 instance.</p>
+					<ol>
+						<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">Install or update the latest version of the AWS CLI</a></li>
+						<li>Configure AWS credentials
+							<pre>sudo apt-get update && \
+sudo apt-get install unzip && \
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+unzip awscliv2.zip && \
+sudo ./aws/install && \
+aws configure</pre>
+						</li>
+						<li>Install <samp>awscurl</samp>
+							<pre>sudo apt-get update && \
+sudo apt-get install python3-pip jq && \
+pip3 install awscurl && \
+export PATH="$PATH:/home/ubuntu/.local/bin"</pre>
+						</li>
+						<li>Execute the <samp>ec2_neptune_query.sh</samp> script which will
+							<ol>
+								<li>read the query string from <samp>stdin</samp></li>
+								<li>use the 1st argument as the Neptune SPARQL endpoint</li>
+								<li>use the 2nd argument as the ARN of Neptune client's role</li>
+								<li>use the 3rd argument as Neptune's region</li>
+							</ol>
+						</li>
+					</ol>
+					<p>For example:</p>
+					<pre>echo "ASK {}" | ./ec2_neptune_query.sh https://neptuneinstance-9yayusfky7oj.cnol6sn9sq5j.us-east-1.neptune.amazonaws.com:8182/sparql arn:aws:iam::580601482069:role/NeptuneClient us-east-1</pre>
+				</div>
+			</div>
 		</div>
 
 		<p class="lead text-center footer">Developed by <a href="https://atomgraph.com"><img alt="AtomGraph" src="https://atomgraph.github.io/GraphExporters/img/atomgraph-logo-color.png" style="height: 2em"/> AtomGraph</a></p>
