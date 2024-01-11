@@ -214,16 +214,33 @@ pip3 install awscurl && \
 export PATH="$PATH:/home/ubuntu/.local/bin"</pre>
 						</li>
 						<li>Execute the <samp>ec2_neptune_query.sh</samp> script which will
-							<ol>
+							<ul>
 								<li>read the query string from <samp>stdin</samp></li>
 								<li>use the 1st argument as the Neptune SPARQL endpoint</li>
 								<li>use the 2nd argument as the ARN of Neptune client's role</li>
 								<li>use the 3rd argument as Neptune's region</li>
-							</ol>
+							</ul>
 						</li>
 					</ol>
 					<p>For example:</p>
 					<pre>echo "ASK {}" | ./ec2_neptune_query.sh https://neptuneinstance-9yayusfky7oj.cnol6sn9sq5j.us-east-1.neptune.amazonaws.com:8182/sparql arn:aws:iam::580601482069:role/NeptuneClient us-east-1</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>RDF output sample</h3>
+					<pre>&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://rdfs.org/sioc/ns#Post&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://xmlns.com/foaf/0.1/Document&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#content&gt; "&lt;https://www.inc.com/christine-lagorio/jack-dangermond-esri-what-i-know-podcast.html&gt;" &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#has_creator&gt; &lt;https://localhost/users/UBM1WAVD1&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#id&gt; "1614287609.001200" &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://purl.org/dc/terms/created&gt; "2021-02-25T21:13:29"^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#reply_of&gt; &lt;https://localhost/conversations/1614287327.000500&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#content&gt; "&lt;https://www.esri.com/about/newsroom/blog/how-researchers-built-johns-hopkins-dashboard/&gt;" &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://purl.org/dc/terms/title&gt; "COVID-19: Inside Look at the Johns Hopkins Dashboard, Keeping Tabs on the Virus" &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#links_to&gt; &lt;https://www.esri.com/about/newsroom/blog/how-researchers-built-johns-hopkins-dashboard/&gt; &lt;https://localhost/conversations/1614287609.001200&gt; .
+&lt;https://localhost/conversations/1614287609.001200&gt; &lt;http://rdfs.org/sioc/ns#content&gt; "Ensheng Dong, the architect of the Johns Hopkins COVID-19 dashboard, applied his knowledge of GIS to map and track the spread of the disease." &lt;https://localhost/conversations/1614287609.001200&gt; .</pre>
 				</div>
 			</div>
 		</div>
