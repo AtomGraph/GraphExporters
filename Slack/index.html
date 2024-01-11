@@ -104,7 +104,7 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Deployment using AWS CloudFormation</h2>
+					<h2>Deployment using <a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation</a></h2>
 					<p>Click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1" target="_blank">this link</a> to create a new CloudFormation stack.
 					<p class="alert alert-warning">Currently only the <samp>us-east-1</samp> availability zone is supported.</p>
 				</div>
@@ -115,11 +115,11 @@
 					<h3>Stack inputs</h3>
 					<dl>
 						<dt>NeptuneDBInstanceClass</dt>
-						<dd>Neptune DB instance class (e.g. <samp>db.t3.medium</samp>)</dd>
+						<dd><a href="https://docs.aws.amazon.com/neptune/latest/userguide/instance-types.html" target="_blank">Neptune DB instance class</a> (e.g. <samp>db.t3.medium</samp>)</dd>
 						<dt>RDFBaseURI</dt>
 						<dd>Base URI for the RDF data (has to end with <samp>/</samp>)</li>
 						<dt>SlackAuthToken</dt>
-						<dd>Slack auth token</dd>
+						<dd><a href="https://api.slack.com/authentication/token-types#user" target="_blank">Slack user token</a> (starts with <samp>xoxp</samp>)</dd>
 					</dl>
 				</div>
 			</div>
