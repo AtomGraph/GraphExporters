@@ -73,8 +73,8 @@
 				font-size: 20px;
 			}
 
-			#github-button { background-image: url('img/GitHub_Logo_White.png'); background-position: center center; background-repeat: no-repeat; width: 100px; background-size: 80%; }
-			#aws-marketplace-button { background-image: url('img/AWSMP_NewLogo_RGB_REV.svg'); background-position: center center; background-repeat: no-repeat; width: 200px; background-size: 80%; }
+			#github-button { background-image: url('../img/GitHub_Logo_White.png'); background-position: center center; background-repeat: no-repeat; width: 100px; background-size: 80%; }
+			#aws-marketplace-button { background-image: url('../img/AWSMP_NewLogo_RGB_REV.svg'); background-position: center center; background-repeat: no-repeat; width: 200px; background-size: 80%; }
 			.gh-button { margin-top: 5px; } /* GH button */
 			.twitter-button { margin-top: 9px; margin-left: 9px; }
 
@@ -101,11 +101,14 @@
 
 		<div class="container-fluid">
 			<h1>Slack Graph Exporter</h1>
+			<p>
+				<a href="https://aws.amazon.com/marketplace/pp/prodview-jiuq6mekaeks2" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="aws-marketplace-button">&nbsp;</a>
+			</p>
 
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Deployment using <a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation</a></h2>
-					<p>Click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1" target="_blank">this link</a> to create a new CloudFormation stack.
+					<p>After you've subscribed to the Amazon Marketplace product, click on <a href="https://console.aws.amazon.com/cloudformation/home#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/com.atomgraph.octopus/OctopusStack.template.json&amp;stackName=SlackGraphExporter&amp;region=us-east-1" target="_blank">this link</a> to create a new CloudFormation stack.
 					<p class="alert alert-warning">Currently only the <samp>us-east-1</samp> availability zone is supported.</p>
 				</div>
 			</div>
@@ -120,6 +123,16 @@
 						<dd>Base URI for the RDF data (has to end with <samp>/</samp>)</li>
 						<dt>SlackAuthToken</dt>
 						<dd><a href="https://api.slack.com/authentication/token-types#user" target="_blank">Slack user token</a> (starts with <samp>xoxp</samp>)</dd>
+						<dd>The token has to have the following <a href="https://api.slack.com/scopes" target="_blank">permission scopes</a>:
+							<pre class="alert alert-info">identify
+bot
+channels:history
+groups:history
+channels:read
+groups:read
+team:read
+users:read</pre>
+						</dd>
 					</dl>
 				</div>
 			</div>
